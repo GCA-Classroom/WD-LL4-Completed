@@ -29,12 +29,13 @@ nav a {
   text-align: center;
 }
 
+/* ✅ Instructor Demo Section */
 .recipes {
   display: flex;
+  flex-wrap: wrap; /* ✅ Instructor adds this to allow wrapping */
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: center; /* ✅ Instructor explains spacing behavior */
   margin-bottom: 2rem;
-  /* BUG: No flex-wrap — layout breaks on small screens */
 }
 
 .card {
@@ -43,6 +44,8 @@ nav a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   overflow: hidden;
   width: 30%;
+  min-width: 280px; /* ✅ Instructor explains purpose */
+  max-width: 320px;
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -59,4 +62,29 @@ footer {
   background: #ffeecc;
 }
 
-/* TODO: Add media queries for better mobile experience */
+/* 🧑‍🤝‍🧑 Student Team Work Starts Here */
+@media (max-width: 768px) {
+  .recipes {
+    flex-direction: column; /* 🔧 Student task: stack cards on tablets */
+    align-items: center;    /* 🔧 Student task: center content */
+  }
+
+  .card {
+    width: 90%; /* 🔧 Student task: responsive card width */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem; /* 🔧 Student task: adjust spacing for small screens */
+  }
+
+  header, footer {
+    padding: 0.5rem;
+  }
+
+  nav a {
+    display: block;        /* 🔧 Student task: stack nav links */
+    margin: 0.25rem 0;
+  }
+}
