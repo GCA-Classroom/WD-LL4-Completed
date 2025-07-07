@@ -10,6 +10,7 @@ body {
   background: #fff8f0;
   color: #333;
   padding: 1rem;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
 }
 
 header {
@@ -84,7 +85,8 @@ footer {
   }
 
   nav a {
-    display: block;        /* 🔧 Student task: stack nav links */
+    display: block;  /* 🔧 Student task: stack nav links */
     margin: 0.25rem 0;
   }
 }
+
